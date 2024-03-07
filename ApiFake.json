@@ -1,0 +1,25 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Camisa Branca",
+      "codigoBarra": "123456789",
+      "quantidade": 50,
+      "preco": "20.00"
+    },
+    {
+      "id": 2,
+      "nome": "Camisa Preta",
+      "codigoBarra": "987654321",
+      "quantidade": 100,
+      "preco": "21.00"      
+    },
+    {
+      "id": 3,
+      "nome": "Camisa Vermelha",
+      "codigoBarra": "678912345",
+      "quantidade": 200,
+      "preco": "22.00"      
+    }
+  ]
+}

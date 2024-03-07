@@ -1,0 +1,31 @@
+<p class="h5">Lista Produtos</p>
+<hr>
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Codigo de Barras</th>
+          <th scope="col">Quantidade</th>
+          <th scope="col">Preco</th>
+          <th scope="col">Acao</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produto of ProdutoList">
+          <td>{{produto.nome}}</td>
+          <td>{{produto.codigoBarra}}</td>
+          <td>{{produto.quantidade}}</td>
+          <td>{{produto.preco}}</td>
+          <td>
+            <button type="button" class="btn btn-danger btn-sm" (click)="excluirProduro(produto.id)" >Remover</button>
+            <a routerLink="/produto/editar/{{produto.id}}" type="button" class="btn btn-secondary btn-sm ms-2">Editar</a>
+          </td>
+        </tr>
+        <tr *ngIf="ProdutoList.length == 0">
+            <td colspan="5">
+                <span style="color: orange; text-align: center;"> Nenhum produto encontrado </span>
+            </td>
+        </tr>
+      </tbody>          
+</table>
+<a routerLink="/produto/cadastrar" class="btn btn-primary btn-sm">Cadastrar</a>
